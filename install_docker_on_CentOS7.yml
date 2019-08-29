@@ -1,0 +1,6 @@
+- name: Install Docker on CentOS 7 (localhost)
+  hosts:
+    - localhost
+  gather_facts: True
+  roles:
+    - 0-install-docker-on-centos7
