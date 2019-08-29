@@ -3,3 +3,14 @@
     url: https://github.com/docker/compose/releases/download/1.24.1/docker-compose-Linux-x86_64
     dest: /usr/local/bin/docker-compose
     creates: /usr/local/bin/docker-compose
+
+- name: Applying executable permissions to the docker-compose binary
+  file:
+    path: /usr/local/bin/docker-compose
+    mode: a+x
+
+- name: Creating a symbolic link to /usr/bin
+  file:
+    src: /usr/local/bin/docker-compose
+    dest: /usr/bin/docker-compose
+    state: link
