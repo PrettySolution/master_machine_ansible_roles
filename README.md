@@ -5,7 +5,8 @@ ansible master machine
 1. $ `ip a` - to look what's IP address 
 1. $ `sed -i "s/BOOTPROTO=dhcp/BOOTPROTO=static/" /etc/sysconfig/network-scripts/ifcfg-ens192`
 1. $ `sed -i "s/ONBOOT=no/ONBOOT=yes/" /etc/sysconfig/network-scripts/ifcfg-ens192`
-1. $ ```  
+1. $ 
+```shell script
    echo "        IPADDR=192.168.15.20  
         NETMASK=255.255.255.0  
         GATEWAY=192.168.15.1  
