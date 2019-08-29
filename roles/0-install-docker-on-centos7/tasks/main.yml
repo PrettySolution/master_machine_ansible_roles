@@ -1,3 +1,21 @@
-- name: Make sure https://{{ server_name }} is working.
-  pause:
-    prompt: "Proceed if it is working..."
+- name: Installing required packages. yum-utils, device-mapper-persistent-data, lvm2
+  yum:
+    name:
+      - yum-utils
+      - device-mapper-persistent-data
+      - lvm2
+    state: present
+
+
+- name: Setting up the stable repository
+  shell: yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+  args:
+    creates: /etc/yum.repos.d/docker-ce.repo
+
+- name: Installing the latest version of Docker Engine
+  yum:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    state: present
