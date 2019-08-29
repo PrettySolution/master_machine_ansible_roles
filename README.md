@@ -23,4 +23,4 @@ ansible master machine
 1. $ `git clone git@github.com:vasilgerman/master_machine_CentOS7.git`
 1. $ `cd master_machine_CentOS7`
 1. $ `ansible -m ping localhost` or `ansible-playbook ping-pong.yml` to check up 
-1. $ 
+1. $  `ansible-playbook `

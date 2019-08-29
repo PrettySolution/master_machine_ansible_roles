@@ -3,4 +3,5 @@
     - localhost
   gather_facts: True
   roles:
-    - 0-install-docker-on-centos7
+#    - 0-install-docker-on-centos7
+    - 1-install-docker-compose-on-centos7
