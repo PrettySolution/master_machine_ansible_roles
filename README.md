@@ -12,6 +12,8 @@ ansible master machine
         GATEWAY=192.168.15.1
         DNS1=8.8.8.8" >> /etc/sysconfig/network-scripts/ifcfg-ens192
 ```
-1. `hostnamectl set-hostname master`
-1. `yum install epel-release -y` (EPEL repo stands for Extra Packages for Enterprise Linux Repository)
-1. `yum install ansible git nano tree -y`
+1. $ `hostnamectl set-hostname master`
+1. $ `yum install epel-release -y` (EPEL repo stands for Extra Packages for Enterprise Linux Repository)
+1. $ `yum install ansible git nano tree -y`
+1. $ `mv /etc/ansible/ansible.cfg /etc/ansible/ansible.cfg.ORIG`
+
