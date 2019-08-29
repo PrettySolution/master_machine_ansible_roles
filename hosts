@@ -1,0 +1,2 @@
+[setup]
+mx.pro-server.pro ansible_ssh_user=root
