@@ -1,0 +1,7 @@
+- name: Install Docker on Ubuntu 16.04 (localhost)
+  hosts:
+    - localhost
+  gather_facts: True
+  roles:
+    - 2-install-docker-on-ubuntu1604
+    - 3-install-docker-compose-on-ubuntu1604

@@ -1,0 +1,18 @@
+- name: Updating repositories cache and install
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg-agent
+      - software-properties-common
+    update_cache: yes
+    state: present
+
+
+- name: Add an Apt signing key, will not download if present
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+
