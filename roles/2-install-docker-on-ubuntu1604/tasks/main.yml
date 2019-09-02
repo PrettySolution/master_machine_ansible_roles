@@ -15,7 +15,16 @@
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
 
-
-- apt_repository:
+- name: setting up the stable repository
+  apt_repository:
     repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+    state: present
+
+- name: Updating repositories cache and install packages (docker-ce docker-ce-cli containerd.io)
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    update_cache: yes
     state: present
