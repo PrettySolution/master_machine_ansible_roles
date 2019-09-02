@@ -17,5 +17,5 @@
 
 
 - apt_repository:
-    repo: deb https://download.docker.com/linux/ubuntu xenial test
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
     state: present
