@@ -1,4 +1,4 @@
-- name: Updating repositories cache and install
+- name: Updating repositories cache and install packages
   apt:
     name:
       - apt-transport-https
@@ -16,3 +16,6 @@
     state: present
 
 
+- apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu xenial stable
+    state: present
