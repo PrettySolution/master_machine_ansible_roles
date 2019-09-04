@@ -1,5 +1,5 @@
 - name: Install Docker on Ubuntu 16.04 (192.168.15.105)
-  hosts: ubuntu1604
+  hosts: localhost
   gather_facts: True
   roles:
     - 2-install-docker-on-ubuntu1604
