@@ -1,4 +1,4 @@
-- name: Install Docker on Ubuntu 16.04
+- name: Install Docker on Ubuntu
   hosts: localhost
   gather_facts: True
   roles:
