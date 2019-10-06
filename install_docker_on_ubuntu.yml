@@ -2,5 +2,5 @@
   hosts: localhost
   gather_facts: True
   roles:
-    - 2-install-docker-on-ubuntu1604
+    - 2-install-docker-on-ubuntu
     - 1-install-docker-compose-on-Linux
