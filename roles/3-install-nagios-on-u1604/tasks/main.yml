@@ -1,19 +1,35 @@
-- name: Updating repositories cache and install packages
-  apt:
-    name:
-      - wget
-      - build-essential
-      - unzip
-      - openssl
-      - libssl-dev apache2
-      - php
-      - libapache2-mod-php
-      - php-gd
-      - libgd-dev
-    update_cache: yes
-    state: present
+#- name: Updating repositories cache and install packages
+#  apt:
+#    name:
+#      - wget
+#      - build-essential
+#      - unzip
+#      - openssl
+#      - libssl-dev
+#      - apache2
+#      - php
+#      - libapache2-mod-php
+#      - php-gd
+#      - libgd-dev
+#    update_cache: yes
+#    state: present
+#- name: Ensure group "nagcmd" exists
+#  group:
+#    name: nagcmd
+#    state: present
+#
+#- name: Add the user 'nagios' with a group of 'nagcmd'
+#  user:
+#    name: nagios
+#    group: nagcmd
+#
+#- name: Add the user 'www-data' with a group of 'nagcmd'
+#  user:
+#    name: www-data
+#    group: nagcmd
 
-- name: Add the user 'nagios' with a group of 'admin'
-  user:
-    name: nagios
-    group: nagcmd
+- name: Download nagions 3.5.1
+  unarchive:
+    src: https://assets.nagios.com/downloads/nagioscore/releases/nagios-3.5.1.tar.gz
+    dest: /var/www/
+    remote_src: yes

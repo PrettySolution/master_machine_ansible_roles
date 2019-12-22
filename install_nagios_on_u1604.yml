@@ -1,6 +1,6 @@
 - name: Install Nagios 3.5.1 on Ubuntu 16.04
   hosts: localhost
   gather_facts: True
+#  become: yes
   roles:
-    - 2-install-docker-on-ubuntu
-    - 1-install-docker-compose-on-Linux
+    - 3-install-nagios-on-u1604
