@@ -1,0 +1,10 @@
+- name: Updating repositories cache and install packages
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg-agent
+      - software-properties-common
+    update_cache: yes
+    state: present
